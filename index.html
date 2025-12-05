@@ -3,7 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pink Potties – woman-owned porta potty rentals in Iola, KS. Clean, reliable, freshly serviced portable toilets with hand sanitizer included. The Pink Standard of Clean." />
+  <meta name="keywords" content="porta potty Iola KS, portable toilet rental Iola, porta potty rental Kansas, clean porta potties, construction site toilets Iola, event restroom rental Iola KS" />
   <title>Pink Potties — The Pink Standard of Clean</title>
+
+  <!-- Local SEO Optimization Added -->
+  <meta name="description" content="Affordable porta potty rentals in Iola, KS. Clean, reliable portable toilets for events, job sites, and more. Woman-owned and focused on cleanliness and service." />
+
+  <!-- Expanded Local Keywords -->
+  <meta name="keywords" content="porta potty Iola KS, portable toilet rental Iola Kansas, porta potty near me, portable restroom Iola KS, toilet rental Allen County KS, event porta potty Iola, construction porta potty rental Iola, sanitation rental Iola, portable toilet service Kansas" />
+
+  <!-- LocalBusiness Schema for Better Google Ranking -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Pink Potties",
+    "description": "Clean, reliable porta potty rentals in Iola, Kansas. Woman-owned, weekly serviced portable restrooms with hand sanitizer included.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Iola",
+      "addressRegion": "KS",
+      "addressCountry": "USA"
+    },
+    "telephone": "620-228-7664",
+    "areaServed": "Allen County KS"
+  }
+  </script>
   <style>
     body {
       margin: 0;
@@ -101,10 +127,82 @@
   <section class="section" id="gallery">
     <h2>Photo Gallery</h2>
     <div class="card">
-      <p>Freshly cleaned, bright pink, and easy to spot on any site.</p>
-      <img src="1000007283.jpg" alt="Pink portable toilet on site" style="width:100%; border-radius:12px; margin-top:15px;" />
-      <img src="1000007285.jpg" alt="Interior of clean pink porta potty" style="width:100%; border-radius:12px; margin-top:15px;" />
-      <img src="1000007284.jpg" alt="Another interior view of pink porta potty" style="width:100%; border-radius:12px; margin-top:15px;" />
+
+      <style>
+        .slide-container {
+          position: relative;
+          max-width: 100%;
+          margin: auto;
+        }
+        .slide {
+          display: none;
+        }
+        .slide img {
+          width: 100%;
+          border-radius: 15px;
+        }
+        .arrow-btn {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          padding: 16px;
+          color: #ff66a6;
+          font-size: 32px;
+          font-weight: bold;
+          user-select: none;
+          transform: translateY(-50%);
+        }
+        .arrow-btn.left { left: 10px; }
+        .arrow-btn.right { right: 10px; }
+        .caption {
+          text-align: center;
+          margin-top: 10px;
+          font-style: italic;
+        }
+      </style>
+
+      <div class="slide-container">
+
+        <div class="slide" style="display:block;">
+          <img src="1000007283.jpg" alt="Pink potty on site" />
+          <p class="caption">Freshly cleaned Pink Potties unit on-site — easy to spot and always sanitary.</p>
+        </div>
+
+        <div class="slide">
+          <img src="1000007285.jpg" alt="Clean interior" />
+          <p class="caption">Interior view showing our thorough cleaning and weekly servicing.</p>
+        </div>
+
+        <div class="slide">
+          <img src="1000007284.jpg" alt="Interior angle" />
+          <p class="caption">Bright, tidy, and stocked — the Pink Standard of Clean.</p>
+        </div>
+
+        <div class="arrow-btn left" onclick="moveSlide(-1)">&#10094;</div>
+        <div class="arrow-btn right" onclick="moveSlide(1)">&#10095;</div>
+
+      </div>
+
+      <script>
+        let slideIndex2 = 1;
+        showSlides2(slideIndex2);
+
+        function moveSlide(n) {
+          showSlides2(slideIndex2 += n);
+        }
+
+        function showSlides2(n) {
+          let i;
+          let slides = document.getElementsByClassName("slide");
+          if (n > slides.length) { slideIndex2 = 1 }
+          if (n < 1) { slideIndex2 = slides.length }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slides[slideIndex2 - 1].style.display = "block";
+        }
+      </script>
+
     </div>
   </section>
 
@@ -131,7 +229,18 @@
     </div>
   </section>
 
-  <footer>
+  <section class="section" id="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="card">
+      <p><strong>⭐️⭐️⭐️⭐️⭐️ "Best smelling potties I've ever used!"</strong><br>
+      This customer said our units smell better than any others they've been in.</p>
+      <hr style="margin:20px 0; border:0; border-top:1px solid #ffd1e6;">
+      <p><strong>⭐️⭐️⭐️⭐️⭐️ "I don’t care that they’re pink — they’re clean and have hand sanitizer!"</strong><br>
+      Another customer said the cleanliness and sanitizer mattered far more than the color.</p>
+    </div>
+  </section>
+
+<footer>
     Pink Potties — Their potties gag you. Mine impress you.
   </footer>
 </body>
